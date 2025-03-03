@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "16eaf383-86ab-409f-a746-38c65c39f0c7",
+		"name": "Test APIs JooyCar Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24610241"
+	},
+	"item": [
+		{
+			"name": "Registrar Personas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Julio Alfredo\",\r\n    \"apellido\":\"Yangali Parco\",\r\n    \"genero\":\"masculino\",\r\n    \"telefono\":\"955589475\",\r\n    \"edad\":26,\r\n    \"region\":\"Lima\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/personas?region=Maipu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"personas"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Maipu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar 1 persona",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/personas/67c5bf2af434c6f58227cafc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"personas",
+						"67c5bf2af434c6f58227cafc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar 1 Persona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Rafael Julio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/personas/67c5bf2af434c6f58227cafc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"personas",
+						"67c5bf2af434c6f58227cafc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Registro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/personas/67c5bf2af434c6f58227cafc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"personas",
+						"67c5bf2af434c6f58227cafc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
